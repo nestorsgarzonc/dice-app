@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   return runApp(
@@ -7,8 +8,11 @@ void main() {
       home: Scaffold(
         backgroundColor: Colors.red,
         appBar: AppBar(
-          title: Text('Dicee'),
-          backgroundColor: Colors.red,
+          title: Text(
+            'Dicee',
+            style: GoogleFonts.aladin(),
+          ),
+          backgroundColor: Colors.red, 
           centerTitle: true,
           elevation: 0,
         ),
@@ -21,6 +25,7 @@ void main() {
 class DicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var leftDice=4;
     return Center(
       child: Row(
         children: <Widget>[
@@ -28,7 +33,7 @@ class DicePage extends StatelessWidget {
             child: FlatButton(
               onPressed: () {},
               child: Image(
-                image: AssetImage('images/dice1.png'),
+                image: AssetImage('images/dice$leftDice.png'),
               ),
             ),
           ),
